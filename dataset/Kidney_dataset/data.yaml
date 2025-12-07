@@ -1,0 +1,14 @@
+data_yaml = f"""
+train: {os.path.join(base_path, 'train/images')}
+val: {os.path.join(base_path, 'val/images')}
+test: {os.path.join(base_path, 'test/images')}
+
+nc: 1
+names: ['Kidney Stone']
+"""
+
+with open("data.yaml", "w") as f:
+    f.write(data_yaml)
+
+# Verify
+!cat data.yaml
